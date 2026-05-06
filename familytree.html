@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="familytree.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>🌳 FamilyTree</h2>
+        <button onclick="showAddFamily()">+ Add Family</button>
+      </header>
+
+      <div id="dashboard" class="page active">
+        <h1>My Families</h1>
+
+        <span>Manage Families</span>
+
+        <div class="cards" id="familyList"></div>
+      </div>
+
+      <div id="familyView" class="page">
+        <div class="top-bar">
+          <span onclick="goBack()">⬅ Dashboard</span>
+          <button onclick="addMember()">+ Add Member</button>
+        </div>
+
+        <div id="tree" class="tree"></div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-box">
+        <h3>Add Family</h3>
+        <input type="text" id="familyName" placeholder="Family Name" />
+        <textarea id="familyDesc" placeholder="Description"></textarea>
+        <button onclick="createFamily()">Create</button>
+      </div>
+    </div>
+
+    <script src="familytree.js"></script>
+  </body>
+</html>
